@@ -1,4 +1,6 @@
-**Welcome! This page contain the list of my projects**
+# Projects
+*COMING SOON*
 
-* Project one
-* Project two
+# Recommended Deep Learning Courses
+* [FAST.AI MOOC](https://course.fast.ai/)
+* [DeepLearning.ai DL specialization by Andrew Ng](https://www.deeplearning.ai/deep-learning-specialization/)
