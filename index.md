@@ -2,8 +2,7 @@
 *COMING SOON*
 
 # Tutorials/demos
-## Colab Notebooks
-* [dl intro - with fastai and pytorch](https://drive.google.com/open?id=1TMDZkgW7F9cyzmLJlpE6JMa_qzyRR7FF)
+* [dl intro - with fastai and pytorch.ipynb](https://colab.research.google.com/drive/1TMDZkgW7F9cyzmLJlpE6JMa_qzyRR7FF)
 
 # Recommended Deep Learning Courses
 * [FAST.AI MOOC](https://course.fast.ai/)
