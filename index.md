@@ -2,7 +2,7 @@
 *COMING SOON*
 
 # Tutorials & Demos
-* [dl intro - with fastai and pytorch.ipynb](https://github.com/g13e/g13e.github.io/blob/master/nbs/dl_intro_with_fastai_and_pytorch.ipynb)
+* [dl intro - with fastai and pytorch.ipynb](https://github.com/g13e/g13e.github.io/blob/master/nbs/dl_intro_with_fastai_and_pytorch.ipynb)   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/g13e/g13e.github.io/blob/master/nbs/dl_intro_with_fastai_and_pytorch.ipynb)
 
 # Recommended Deep Learning Courses
 * [FAST.AI MOOC](https://course.fast.ai/)
