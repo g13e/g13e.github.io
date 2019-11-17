@@ -9,4 +9,4 @@
 * [DeepLearning.ai by Andrew Ng](https://www.deeplearning.ai/deep-learning-specialization/)
 
 # Deep Learning books
-* [d2la.i, an interactive deep learning book])(http://d2l.ai/)
+* [d2l.ai, an interactive deep learning book](http://d2l.ai/)
