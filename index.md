@@ -11,3 +11,4 @@
 
 # Deep Learning books
 * [d2l.ai, an interactive deep learning book](http://d2l.ai/)
+* [deep learning book, by Goodfellow, Bengio and Courville](http://www.deeplearningbook.org/)
