@@ -44,7 +44,7 @@ window.addEventListener('load', function () {
   }
 
   async function initNN(){
-    const MODEL_URL = 'model.json';
+    const MODEL_URL = './model.json';
     model = await tf.loadLayersModel(MODEL_URL);
     console.log(model.summary());
     console.log("Network initialized!");
@@ -124,8 +124,6 @@ window.addEventListener('load', function () {
     }
 
     //define input
-    const tensor = getInput();
-
     const img = getInput();
     var out=model.predict(img);
     console.log(out);
