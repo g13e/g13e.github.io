@@ -1,5 +1,6 @@
-//ONNX.JS code based on the original tutorial from MS here: https://github.com/microsoft/onnxjs-demo/tree/master
 //Canvas drawing code based on dev.opera tutorial here: https://dev.opera.com/articles/html5-canvas-painting/
+//tfjs code based on material from the deeplearning.ai TF specializations 
+
 
 // Keep everything in anonymous function, called on window load.
 if(window.addEventListener) {
@@ -8,6 +9,7 @@ window.addEventListener('load', function () {
   var context, ctxScaled,ctxCenterCrop;
   var tool,session;
   var nn_ready=false;
+  var model;
 
   function init () {
     // Find the canvas element.
@@ -41,14 +43,10 @@ window.addEventListener('load', function () {
     initNN();
   }
 
-  function initNN(){
-    // create a session
-    session = new onnx.InferenceSession({backendHint: "webgl"});
-    // load the ONNX model file
-    // use the following in an async method
-    //const url = "./mnist.onnx";
-    const url = "./mnist-demo-resnet-18.onnx";
-    session.loadModel(url);
+  async function initNN(){
+    const MODEL_URL = 'model.json';
+    model = await tf.loadLayersModel(MODEL_URL);
+    console.log(model.summary());
     console.log("Network initialized!");
     nn_ready=true;
   }
@@ -128,13 +126,9 @@ window.addEventListener('load', function () {
     //define input
     const tensor = getInput();
 
-    // Run model with Tensor inputs and get the result by output name defined in model.
-    const outputMap = await session.run([tensor]);
-    const outputTensor = outputMap.values().next().value;
-    const output = getPredictedClass(outputTensor);
-    console.log(output);
-    
-    print_prediction("Is this a "+output+" ?");
+    const img = getInput();
+    var out=model.predict(img);
+    console.log(out);
   }
 
   function getInput(){

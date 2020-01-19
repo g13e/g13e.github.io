@@ -3,18 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Mnist Demo</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
-    <script>
-      async function run(){
-          const MODEL_URL = 'model.json';
-          const model = await tf.loadLayersModel(MODEL_URL);
-          console.log(model.summary());
-          //const input = tf.tensor2d([10.0], [1,1]);
-          //const result = model.predict(input);
-          //consol.log(result)
-    }
-    run();
-  </script>
     <style type="text/css">
       html{
         background-color:#ededed;
@@ -67,6 +55,7 @@
       <h2>PREDICTION: </h2>
       <p><div id="prediction"></div></p>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
