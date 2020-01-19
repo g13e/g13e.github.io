@@ -153,7 +153,7 @@ window.addEventListener('load', function () {
       input[i / 4] = data[i + 3] / 255;
     }
 
-    const tensor = tf.tensor(input, [1, 1, 28, 28],'float32');
+    const tensor = tf.tensor(input, [28, 28],'float32');
     return tensor;
 
   }
