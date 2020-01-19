@@ -1,7 +1,7 @@
-# Projects
-*COMING SOON*
+# Demos
+* [Digit recognition (MNIST) using Tensorflow.js](https://g13e.github.io/demos/mnist/index.html)
 
-# Tutorials & Demos
+# Tutorials
 * [dl intro - with fastai and pytorch](https://github.com/g13e/g13e.github.io/blob/master/nbs/dl_intro_with_fastai_and_pytorch.ipynb)   
 * [dl intro - with Tensorflow](https://github.com/g13e/g13e.github.io/blob/master/nbs/dl_intro_Tensorflow.ipynb)
 * [Kaggle Titanic - Random Forest and Deep Learning](https://github.com/g13e/g13e.github.io/blob/master/nbs/kaggle_titanic_fastai.ipynb)   
