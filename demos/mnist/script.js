@@ -126,11 +126,11 @@ window.addEventListener('load', function () {
 
     //get a tensor with the input
     const img = getInput();
-    //run the model with the image input
+    //run the model with the image input, get a tensor with 10 probabilities as result
     var out=model.predict(img);
-    //var prediction=out.argMax();
     console.log(out);
-    print_prediction(out);
+    var pred=out.argMax();
+    print_prediction(pred+" "+out);
     
   }
 
