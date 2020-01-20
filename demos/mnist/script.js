@@ -40,6 +40,7 @@ window.addEventListener('load', function () {
     canvas.addEventListener('mousemove', ev_canvas, false);
     canvas.addEventListener('mouseup',   ev_canvas, false);
 
+    //init neural network
     initNN();
   }
 
@@ -123,8 +124,9 @@ window.addEventListener('load', function () {
       return;
     }
 
-    //define input
+    //get a tensor with the input
     const img = getInput();
+    //run the model with the image input
     var out=model.predict(img);
     console.log(out);
   }
@@ -146,6 +148,7 @@ window.addEventListener('load', function () {
     ctxScaled.drawImage(document.getElementById('input-canvas-centercrop'), 0, 0);
     const imageDataScaled = ctxScaled.getImageData(0, 0, ctxScaled.canvas.width, ctxScaled.canvas.height);
     ctxScaled.restore();
+
     // process image data for model input
     const { data } = imageDataScaled;
     const input = new Float32Array(784);
@@ -153,7 +156,7 @@ window.addEventListener('load', function () {
       input[i / 4] = data[i + 3] / 255;
     }
 
-    const tensor = tf.tensor(input, [28, 28],'float32');
+    const tensor = tf.tensor(input, [1,28, 28],'float32');
     return tensor;
 
   }
