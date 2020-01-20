@@ -130,7 +130,7 @@ window.addEventListener('load', function () {
     var out=model.predict(img);
     console.log(out);
     var pred=out.argMax(1);
-    var message="Digit: "+pred+ "\n Output Tensor:"+out;
+    var message="Predicted Digit: "+pred.asType("int32")+ "\n Output:"+out;
     print_prediction(message);
     
   }
