@@ -128,10 +128,9 @@ window.addEventListener('load', function () {
     const img = getInput();
     //run the model with the image input
     var out=model.predict(img);
+    //var prediction=out.argMax();
     console.log(out);
-    var prediction=getPredictedClass(out);
-    console.log(prediction);
-    print_prediction(prediction);
+    print_prediction(out);
     
   }
 
@@ -163,15 +162,6 @@ window.addEventListener('load', function () {
     const tensor = tf.tensor(input, [1,28, 28],'float32');
     return tensor;
 
-  }
-
-  function getPredictedClass(rawOutput) {
-    //output=postprocess(rawOutput);
-    output=rawOutput.data;
-    if (output.reduce((a, b) => a + b, 0) === 0) { 
-      return -1;
-    }
-    return output.reduce((argmax, n, i) => (n > output[argmax] ? i : argmax), 0);
   }
 
   function postprocess(rawOutput){
