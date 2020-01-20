@@ -129,8 +129,9 @@ window.addEventListener('load', function () {
     //run the model with the image input, get a tensor with 10 probabilities as result
     var out=model.predict(img);
     console.log(out);
-    var pred=out.argMax();
-    print_prediction(pred+" "+out);
+    var pred=out.argMax(1);
+    var message="Digit: "+pred+ "\n Output Tensor:"+out;
+    print_prediction(message);
     
   }
 
@@ -162,18 +163,6 @@ window.addEventListener('load', function () {
     const tensor = tf.tensor(input, [1,28, 28],'float32');
     return tensor;
 
-  }
-
-  function postprocess(rawOutput){
-    return softmax(Array.prototype.slice.call(rawOutput.data));  
-  }
-
-  function softmax(arr) {
-    const C = Math.max(...arr);
-    const d = arr.map((y) => Math.exp(y - C)).reduce((a, b) => a + b);
-    return arr.map((value, index) => { 
-        return Math.exp(value - C) / d;
-    });
   }
 
   function centerCrop(imageData) {
