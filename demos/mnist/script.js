@@ -129,6 +129,10 @@ window.addEventListener('load', function () {
     //run the model with the image input
     var out=model.predict(img);
     console.log(out);
+    var prediction=getPredictedClass(out);
+    console.log(prediction);
+    print_prediction(prediction);
+    
   }
 
   function getInput(){
