@@ -3,17 +3,19 @@
 # Use the Hitchens theme remotely
 # remote_theme: patdryburgh/hitchens-theme
 
-# Hitchens specific settings
 title: g13e hacks
 description: experiments, ideas and more...
-paginate: 20
+paginate: 3
 paginate_path: "/page/:num/"
 show_excerpts: true
 
+# Build settings
+markdown: kramdown
+
 #necessary plugins
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
-- jekyll-paginate
+  - jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-paginate
 
 # other settings
 show_downloads: false
