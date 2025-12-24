@@ -5,9 +5,8 @@
 
 title: g13e hacks
 description: experiments, ideas and more...
-paginate: 3
-paginate_path: "/page/:num/"
-show_excerpts: true
+icon: /assets/images/icon-512.png
+url: "https://g13e.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
@@ -17,6 +16,15 @@ plugins:
   - jekyll-remote-theme # add this line to the plugins list if you already have one
   - jekyll-paginate
 
+# pagination settings
+paginate: 3
+paginate_path: "/page/:num/"
+show_excerpts: true
+excerpt_length: 20
+
+
 # other settings
 show_downloads: false
+hide_search: true
+hide_credits: true
 google_analytics: UA-69796574-2
