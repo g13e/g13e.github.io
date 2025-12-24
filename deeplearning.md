@@ -1,3 +1,7 @@
+---
+layout: page
+title: Deep Learning
+---
 # Demos
 * [Digit recognition (MNIST) using Tensorflow.js](https://g13e.github.io/demos/mnist/index.html)
 
