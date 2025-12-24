@@ -1,5 +1,8 @@
-theme: jekyll-theme-hacker
+# theme: jekyll-theme-hacker
+remote_theme: hitchens-theme
 title: g13e hacks
 description: experiments, ideas and more...
 show_downloads: false
 google_analytics: UA-69796574-2
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
