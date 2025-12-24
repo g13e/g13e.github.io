@@ -1,8 +1,20 @@
 # theme: jekyll-theme-hacker
-remote_theme: hitchens-theme
+
+# Use the Hitchens theme remotely
+remote_theme: patdryburgh/hitchens
+
+# Hitchens specific settings
 title: g13e hacks
 description: experiments, ideas and more...
-show_downloads: false
-google_analytics: UA-69796574-2
+paginate: 20
+paginate_path: "/page/:num/"
+show_excerpts: true
+
+#necessary plugins
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
+- jekyll-paginate
+
+# other settings
+show_downloads: false
+google_analytics: UA-69796574-2
