@@ -1,7 +1,7 @@
 # theme: jekyll-theme-hacker
 
 # Use the Hitchens theme remotely
-remote_theme: patdryburgh/hitchens
+remote_theme: patdryburgh/hitchens-theme
 
 # Hitchens specific settings
 title: g13e hacks
